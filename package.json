@@ -1,0 +1,39 @@
+{
+  "name": "k-admin-be",
+  "version": "1.0.0",
+  "description": "kervin",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development nodemon -x babel-node index.js",
+    "check": "cross-env NODE_ENV=production nodemon-x babel-node index.js",
+    "lint": "npm run lint:eslint  && npm run lint:prettier",
+    "lint:eslint": "eslint   \"src/**/*.{js,json,html,md,cjs,mjs}\" --fix",
+    "lint:prettier": "prettier --write  \"src/**/*.{js,json,html,md,cjs,mjs}\""
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.10",
+    "express": "^4.18.2",
+    "mysql2": "^3.9.1",
+    "sequelize": "^6.35.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "3.2.4"
+  }
+}
